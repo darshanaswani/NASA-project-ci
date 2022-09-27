@@ -8,8 +8,7 @@ mongoose.connection.on("error", (err) => {
   console.error(err);
 });
 
-const MONGO_URL =
-  "mongodb+srv://nasaproject:EDpIWLzeYnZT9fEA@nasa-api.momoogz.mongodb.net/?retryWrites=true&w=majority";
+const MONGO_URL = "mongodb://localhost:27017";
 
 const mongoConnect = async () => {
   await mongoose.connect(MONGO_URL);

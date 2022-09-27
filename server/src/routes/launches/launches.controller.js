@@ -31,7 +31,7 @@ const httpAddNewLaunch = async (req, res) => {
   launch.launchDate = new Date(launch.launchDate);
   if (isNaN(launch.launchDate)) {
     return res.status(400).json({
-      error: "Missing required launch property",
+      error: "Invalid launch date",
     });
   }
   await scheduleNewLaunch(launch);
